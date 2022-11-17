@@ -27,7 +27,7 @@ finalAmount = year1
 
 #loop for each year
 while i < yrs:
-    finalAmount = (year1 * 0.06) + year1
+    finalAmount = (finalAmount * 0.06) + finalAmount
     i += 1
 
 
