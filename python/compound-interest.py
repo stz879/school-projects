@@ -35,4 +35,5 @@ while i < yrs:
 #added "load time" just for fun
 print("Calculating...")
 time.sleep(sleepTime)
+#                                                v make the end result at least 4 characters, with 2 numbers past the decimal point
 print("Your total, after", yrs, "years, is $", '{:04.2f}'.format(finalAmount))
