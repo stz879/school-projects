@@ -51,9 +51,3 @@ while i < yrs:
 print("Calculating...")
 time.sleep(sleepTime)
 print("Your total, after", yrs, "years, is $", '{:04.2f}'.format(finalAmount))
-
-
-
-
-
-
