@@ -5,22 +5,6 @@ import math
 #choose between 1 to 3 seconds to wait while "calculating" later
 sleepTime = random.randint(1, 5)
 
-#define functions for use later
-#used between years
-
-#used if user is on the last year of saving
-def finished():
-    print('Type "Exit" to exit the program')
-    inp = input("").strip().capitalize()
-    if inp == "Exit":
-        print("")
-        print("Thank you for using the Compound Interest Program")
-        print("")
-    else:
-        print("That is not a proper command")
-        finished()
-        
-
 
 #prompt user
 print("Hello! Welcome to the Compound Interest Program!")
@@ -35,12 +19,13 @@ print("How many years do you plan to leave it?")
 yrsInput = input("")
 yrs = int(yrsInput)
 
-
+#calculate 1st year. done for variable convenience
 year1 = (dep * 0.06) + dep
 
 i = 1
 finalAmount = year1
 
+#loop for each year
 while i < yrs:
     finalAmount = (year1 * 0.06) + year1
     i += 1
