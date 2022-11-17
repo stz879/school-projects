@@ -2,9 +2,6 @@ import time
 import random
 import math
 
-#choose between 1 to 3 seconds to wait while "calculating" later
-sleepTime = random.randint(1, 5)
-
 
 #prompt user
 print("Hello! Welcome to the Compound Interest Program!")
@@ -34,6 +31,6 @@ while i < yrs:
 
 #added "load time" just for fun
 print("Calculating...")
-time.sleep(sleepTime)
+time.sleep(random.randint(1, 5))
 #                                                v make the end result at least 4 characters, with 2 numbers past the decimal point
 print("Your total, after", yrs, "years, is $", '{:04.2f}'.format(finalAmount))
