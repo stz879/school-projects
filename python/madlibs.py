@@ -30,13 +30,16 @@ print("Alright, now a LIQUID")
 liquid = input("")
 
 print("A VERB ending in -ING")
-verb_ing = input("")
+verb_ing1 = input("")
 
 print("I need a NOUN (plural")
 noun_plural = input("")
 
-print("Last one! A piece of FURNITURE")
+print("A piece of FURNITURE")
 furniture = input("")
+
+print("Last one! Another VERB ending in ING")
+verb_ing2 = input("")
 
 #"wait time" - waits between 1 to 3 seconds
 print("Generating story...")
@@ -48,6 +51,6 @@ print(f"It was a cold, {adj}, winter day.")
 print(f"I woke up to the smell of {food} cooking downstairs.")
 print(f"I {past_verb} down the stairs to help with the {food}.")
 print(f"My {person} told me to see if my {relative} needed a fresh {noun1}.")
-print(f"So I carried a tray of glasses full of {liquid} into the {verb_ing} room.")
-print(f"When I came into the {verb_ing} room, I couldn't believe my eyes!")
-print(f"There were {noun_plural} {verb_ing} on the {furniture}!")
+print(f"So I carried a tray of glasses full of {liquid} into the {verb_ing1} room.")
+print(f"When I came into the {verb_ing1} room, I couldn't believe my eyes!")
+print(f"There were {noun_plural} {verb_ing2} on the {furniture}!")
