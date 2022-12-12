@@ -60,7 +60,7 @@ def prompt():
             else:
                 print("")
         print("with a total of $", userTotal)
-        print("Cash or card?")
+        print("Please pay at the window")
                 
     else:
       print ("That is not a valid command.")
