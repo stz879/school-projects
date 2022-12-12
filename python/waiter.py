@@ -59,7 +59,7 @@ def prompt():
                 print(i)
             else:
                 print("")
-        print("with a total of $", userTotal)
+        print(f"with a total of ${usertotal}")
         print("Please pay at the window")
                 
     else:
