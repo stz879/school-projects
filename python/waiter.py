@@ -58,8 +58,7 @@ def prompt():
                 userTotal = userTotal + menu["drinks"][i]
                 print(i)
             else:
-                print("How did this get here?")
-                print("You better order again, I don't think ", i, " is supposed to be here.")
+                print("")
         print("with a total of $", userTotal)
         print("Cash or card?")
                 
