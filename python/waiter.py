@@ -1,29 +1,32 @@
-#reset order
+import time
+
+#reset vars and such
 global userOrder
 userOrder = "null"
 global orderList
 orderList = []
+global userTotal
+userTotal = 0
 
-#dictionary for menu
+#dictionary of menu items
 global menu
 menu = {
-    
+  
     "food": {
-        "Chicken Nuggets": "$4",
-        "Fries": "$2",
-        "Hamburger": "$7"
-        ""
-    },
-    
+        "Chicken Nuggets": 5,
+        "Hamburger": 6,
+        "Fries": 2
+  }, 
+
     "drinks": {
-        "Pepsi": "$2",
-        "Coca-Cola": "$2",
-        "Dr. Pepper": "$2",
-        "Water": "$0"
-    }
-    
-    
+        "Water": 0,
+        "Pepsi": 2,
+        "Dr Pepper": 2,
+        "Coca Cola": 2
+  }
+
 }
+
 
 def prompt():
     print('Type "order" to order more, type "review" to review order')
@@ -31,47 +34,70 @@ def prompt():
     selection = input("").strip().lower()
     if selection == "order": 
       orderGet(); 
+      
     elif selection == "review":
-      print ("")
-      print (orderList)
+      print("")
+      print("Currently, your order is:")
+      for x in orderList:
+          print(x)
+      print("")
       prompt();
+      
     elif selection == "done":
+        userTotal = 0
         print("")
         print("")
         print("")
         print("Your order is:")
-        for x in orderList:
-            print(x)
+        
+        for i in orderList:
+            if i in menu["food"]:
+                userTotal = userTotal + menu["food"][i]
+                print(i)
+                
+            elif i in menu["drinks"]:
+                userTotal = userTotal + menu["drinks"][i]
+                print(i)
+            else:
+                print("How did this get here?")
+                print("You better order again, I don't think ", i, " is supposed to be here.")
+        print("with a total of $", userTotal)
+        print("Cash or card?")
+                
     else:
       print ("That is not a valid command.")
       prompt();
 
-def orderSuccess():
-    print("")
-    print("Added to order")
-    prompt();
-    
 
-#def orderFinished():
-    
-
-#ordering function
 def orderGet():
+    #print menu and take user order
     print("We have:")
     for i in menu["food"] :
-        print("Item: " + i, " Price: " + menu["food"][i])
+        print("Item: " + i, " Price: $" + str(menu["food"][i]))
     print("")
     for i in menu["drinks"] :
-        print("Item: " + i, " Price: " + menu["drinks"][i])
+        print("Item: " + i, " Price: $" + str(menu["drinks"][i]))
+        
     print("What would you like to order?")
     userOrder = input("").strip().lower().title()
-
-    if userOrder in menu["food"] or menu["drinks"]:
+    
+    #check if order is on the menu
+    if userOrder in menu["food"]:
         orderList.append(userOrder)
-        orderSuccess();
-    #when user orders something not on the menu, throw error
+        print("")
+        print("Added to order")
+        prompt();
+        
+    elif userOrder in menu["drinks"]:
+        orderList.append(userOrder)
+        print("")
+        print("Added to order")
+        prompt();
+        
     else:
-        print("That's not on the menu. Try something else");
+        print("That is not on the menu.")
+        print("")
+        time.sleep(1)
         orderGet();
 
 
