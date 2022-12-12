@@ -5,8 +5,7 @@ global userOrder
 userOrder = "null"
 global orderList
 orderList = []
-global userTotal
-userTotal = 0
+
 
 #dictionary of menu items
 global menu
