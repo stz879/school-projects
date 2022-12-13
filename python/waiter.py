@@ -12,6 +12,7 @@ global menu
 menu = {
   
     "food": {
+        "Salad": 4,
         "Chicken Nuggets": 5,
         "Hamburger": 6,
         "Fries": 2
@@ -85,13 +86,13 @@ def orderGet():
         print("")
         print("Added to order")
         prompt();
-        
+
     elif userOrder in menu["drinks"]:
         orderList.append(userOrder)
         print("")
         print("Added to order")
         prompt();
-        
+
     else:
         print("That is not on the menu.")
         print("")
