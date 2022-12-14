@@ -78,6 +78,7 @@ def orderGet():
         print("Item: " + i, " Price: $" + str(menu["drinks"][i]))
         
     print("What would you like to order?")
+    print("(Please order one item at a time!)")
     userOrder = input("").strip().lower().title()
     
     #check if order is on the menu
