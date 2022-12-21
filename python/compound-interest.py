@@ -33,4 +33,4 @@ while i < yrs:
 print("Calculating...")
 time.sleep(random.randint(1, 5))
 #                                                v make the end result at least 4 characters, with 2 numbers past the decimal point
-print("Your total, after", yrs, "years, is $", '{:04.2f}'.format(finalAmount))
+print(f"Your total, after {yrs} years, is $", '{:04.2f}'.format(finalAmount))
