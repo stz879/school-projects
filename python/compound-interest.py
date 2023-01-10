@@ -46,5 +46,5 @@ while i < yrs:
 #added "load time" just for fun
 print("Calculating...")
 time.sleep(random.randint(1, 3))
-#                                                v make the end result at least 4 characters, with 2 numbers past the decimal point
+#                                                v make the end result at least 1 character, with 2 numbers past the decimal point
 print(f"Your total, after {yrs} years, is $", '{:01.2f}'.format(finalAmount))
