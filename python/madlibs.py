@@ -6,58 +6,64 @@ print("MadLibs v1.2")
 print("Initializing...")
 time.sleep(random.randint(1, 5))
 
-print("Would you like to hear story 1 or story 2?")
-conf = int(input(""))
-
-if conf == 1:
-  global story
-  story
+def ask_for_story():
+  print("Would you like to hear story 1 or story 2?")
+  conf = int(input(""))
+  if conf != 1 or 2:
+    print("That is not a valid option.")
+    ask_for_story();
+ 
+ask_for_story()
 
 #user prompts
-print("Give me an ADJECTIVE")
-adjective = input("")
-
-print("Now give me a NOUN")
-first_noun = input("")
-
-print("Past tense VERB?")
-past_tense_verb = input("")
-
-print("What about a PERSON?")
-person = input("")
-
-print("Ok, now a RELATIVE")
-relative = input("")
 
 print("Give me a NOUN")
-second_noun = input("")
-
-print("Alright, now a NOUN")
-third_noun = input("")
-
-print("Can you think of a VERB?")
-verb = input("")
+noun = input("")
 
 print("I need a PLURAL NOUN")
-plural_noun = input("")
+plural_noun1 = input("")
+      
+print("Try a PRESENT TENSE VERB")
+present_tense_verb1 = input("")
 
-print("A fourth NOUN")
-fourth_noun = input("")
+print("Another PRESENT TENSE VERB?")
+present_tense_verb2 = input("")
 
-print("Last one! Another VERB")
-second_verb = input("")
+print("Alright, try a PLURAL PART OF THE BODY")
+parts_of_body = input("")
+
+print("An ADJECTIVE?")
+adjective1 = input("")
+
+print("A second PLURAL NOUN")
+plural_noun2 = input("")
+
+print("Final one! An ADJECTIVE")
+adjective2 = input("")
+
 
 #"wait time" - waits between 1 to 3 seconds
 print("Generating story...")
 time.sleep(random.randint(1, 3))
-
+print("Alright, here it is:")
+time.sleep(0.5)
 
 #print story
-print(f"It was a cold, {adjective}, winter day.")
-print(f"I woke up to the smell of {first_noun} cooking downstairs.")
-print(f"I {past_tense_verb} down the stairs to help with the {first_noun}.")
-print(f"My {person} told me to see if my {relative} needed a fresh {second_noun}.")
-print(f"So I carried a tray of glasses full of {third_noun} into the {verb}ing room.")
-print(f"When I came into the {verb}ing room, I couldn't believe my eyes!")
-print(f"There were {plural_noun} {second_verb}ing on the {fourth_noun}!")
-
+if conf == 1:
+  print(f"Today, every student has a computer small enough to fit into his {noun}.")
+  print(f"He can solve any math problem by simply pushing the computer's little {plural_noun1}.")
+  print(f"Computers can add, multiply, divide, and {present_tense_verb1}.")
+  print(f"They can also {present_tense_verb2} better than a human.")
+  print(f"Some computers are {parts_of_body}.")
+  print(f"Others have a(n) {adjective1} screen that shows all kinds of {plural_noun2} and {adjective2} figures.")
+elif conf == 2:
+  print(f"I opened the door this morning and found a {noun} on my doorstep.")
+  print(f"It didn't seem to have any name or note- but when I opened it up, there was {plural_noun1} inside.")
+  print(f"I didn't see the person who left it, but I didn't want it to get stolen, so I had no choice but to {present_tense_verb1} it into the house.")
+  print(f"I left it on the kitchen table and forgot about it... until it had {present_tense_verb2} on my {parts_of_body}.")
+  print(f"")
+else:
+  time.sleep(1)
+  print(f"Wait, this isn't right. You said you wanted story {conf}, but that isn't an option!")
+  print("It's best you pick again.")
+  ask_for_story();
