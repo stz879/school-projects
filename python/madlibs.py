@@ -1,7 +1,3 @@
-#user prompt
-print("Give me an ADJECTIVE")
-adj_1 = input("")
-
 import time
 import random
 
