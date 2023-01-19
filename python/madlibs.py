@@ -2,7 +2,7 @@ import time
 import random
 
 #startup
-print("MadLibs v1.2")
+print("MadLibs v2.2")
 print("Initializing...")
 time.sleep(random.randint(1, 5))
 
