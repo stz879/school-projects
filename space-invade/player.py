@@ -2,8 +2,8 @@
 #player spawn when variable set to true
 
 #set player hp and damage
-    #player starting hp = 
-    #player starting damage = 
+    #player starting hp = 10
+    #player starting damage = 1
 
 #set score to 0
 

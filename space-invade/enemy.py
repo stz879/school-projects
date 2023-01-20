@@ -5,8 +5,8 @@
     #basic enemy starting hp = 1
     #basic enemy starting damage = 1
 
-    #stronger enemy starting hp =
-    #stronger enemy starting damage =
+    #stronger enemy starting hp = 3
+    #stronger enemy starting damage = 2
 
 #enemies start moving, but wait 2 seconds to start shooting
 #player also has to wait 2 seconds to start shooting, but only 0.5 to start moving
