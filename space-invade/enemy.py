@@ -21,5 +21,7 @@ strong_enemy_dmg = 2
 #if all enemies are dead
     #respawn enemies with a 0.5x boost to damage
     # +1 to level count
+lvl = +1
     # +2 to player max health
+player_hp += 2
     # +n to pixels traveled by enemies
