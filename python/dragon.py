@@ -10,4 +10,4 @@ s.bgcolor('white')
 t.color('black', 'red')
 t.shape('classic')
 
-#t.setpos()
+t.setpos()
