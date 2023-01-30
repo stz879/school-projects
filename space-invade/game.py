@@ -6,6 +6,9 @@ import winsound
 
 wn = turtle.Screen()
 
+#splash screen, "insert coin/press any button" prompt
+    #screen switches when button pressed
+
 def game():
     time.sleep(random.randint(1,2))
 
@@ -27,9 +30,6 @@ def game():
     pen.goto(200, 330)
     pen.write("High Score: 0", align="center", font=("candara", 24, "bold"))
 
-    #splash screen, "insert coin/press any button" prompt
-    #screen switches when button pressed
-
     #set spawn variables to true for n seconds
 
     #spawn barriers
@@ -38,7 +38,7 @@ def game():
         #barriers never disappear
 
     #player spawn when variable set to true
-    #player = turtle.Turtle()
+    player = turtle.Turtle()
 
     #set player hp and damage
     player_hp = 3
@@ -64,15 +64,15 @@ def game():
 
     wn.listen()
     #left arrow/A pressed, move left
-    turtle.onkeypress(move_left, "a")
-    turtle.onkeypress(move_left, "Left")
+    player.onkeypress(move_left, "a")
+    player.onkeypress(move_left, "Left")
 
     #right arrow/D pressed, move right
-    turtle.onkeypress(move_right, "d")
-    turtle.onkeypress(move_right, "Right")
+    player.onkeypress(move_right, "d")
+    player.onkeypress(move_right, "Right")
 
     #space pressed, shoot
-    turtle.onkeypress(shoot, "space")
+    player.onkeypress(shoot, "space")
 
     #if player hp hits 0
     if player_hp == 0:
