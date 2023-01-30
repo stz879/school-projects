@@ -5,6 +5,26 @@ import os
 
 time.sleep(random.randint(1,2))
 
+#splash screen, "insert coin/press any button" prompt
+cursor_size = 20
+font_size = 12
+font = ('Comic Sans ms', font_size, 'bold')
+
+def draw_onclick(x, y):
+    turtle.dot(100, 'cyan')
+
+button = turtle.Turtle()
+button.hideturtle()
+button.shape('circle')
+button.fillcolor('red')
+button.penup()
+button.goto(150, 150)
+button.write("Click me!", align='center', font=font)
+button.sety(150 + cursor_size + font_size)
+button.onclick(draw_onclick)
+button.showturtle()
+
+
 #draw screen, music begins
 wn = turtle.Screen()
 wn.title("spase ivaders !!")
@@ -23,7 +43,7 @@ pen.hideturtle()
 pen.goto(0, 250)
 pen.write("Score: 0  High Score: 0", align="center", font=("candara", 24, "bold"))
 
-#splash screen, "insert coin/press any button" prompt
+
 #screen switches when button pressed
 
 #set spawn variables to true for n seconds
@@ -70,6 +90,7 @@ turtle.onkeypress(shoot, "Space")
 
 #if player hp hits 0
     #show explosion
+wn.bgpic("explosion-boom.gif")
 
     #wait 3 seconds
     
