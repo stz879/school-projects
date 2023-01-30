@@ -21,7 +21,7 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 250)
-pen.write("Score: 0  High Score :0", align="center", font=("candara", 24, "bold"))
+pen.write("Score: 0  High Score: 0", align="center", font=("candara", 24, "bold"))
 
 #splash screen, "insert coin/press any button" prompt
 #screen switches when button pressed
@@ -34,24 +34,40 @@ pen.write("Score: 0  High Score :0", align="center", font=("candara", 24, "bold"
     #barriers never disappear
 
 #player spawn when variable set to true
-
+player = turtle.Turtle()
 #set player hp and damage
 
-    #player starting hp = 
-    #player starting damage = 
+    #player starting hp = 3
+    #player starting damage = 1
 
 #set score to 0
 
 #player controlfunctions
+def shoot():
+    #function for player shooting
+    pass
 
+def move_left():
+    #function for player moving left
+    pass
+
+def move_right():
+    #function for player moving right
+    pass
+
+
+player.listen()
 #left arrow/A pressed, move left
-turtle.listen()
-#turtle.onkeypress(move_left, "a")
+turtle.onkeypress(move_left, "a")
+turtle.onkeypress(move_left, "Left")
 
-#right arrow/D pressed, more right
-#turtle.onkeypress(move_right, "d")
+#right arrow/D pressed, move right
+turtle.onkeypress(move_right, "d")
+turtle.onkeypress(move_right, "Right")
+
 #space pressed, shoot
-#def shoot():
+turtle.onkeypress(shoot, "Space")
+
 #if player hp hits 0
     #show explosion
 
@@ -59,4 +75,4 @@ turtle.listen()
     
     #go to game start screen
 
-
+wn.mainloop()
