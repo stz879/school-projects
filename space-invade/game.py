@@ -11,7 +11,7 @@ wn.title("spase ivaders !!")
 wn.bgcolor("purple")
 wn.bgpic("spase.gif")
 
-wn.setup(width=1920, height=1080)
+wn.setup(width=1200, height=831)
 wn.tracer(0)
 
 pen = turtle.Turtle()
