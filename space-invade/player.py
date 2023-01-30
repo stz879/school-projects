@@ -1,6 +1,12 @@
 #listen for variable to be true
+wn = turtle.Screen()
 #player spawn when variable set to true
-
+player=turtle.Turtle()
+player.color("red")
+player.penup()
+speed=10
+wn.onkey(lambda: player.setheading(180), 'Left')
+wn.onkey(lambda: player.setheading(0), 'Right')
 #set player hp and damage
     #player starting hp = 10
 player_hp = 10
@@ -13,7 +19,11 @@ score = 0
 
 #player controls
     #left arrow/A pressed, move left
+def left():
+    player.setheading(180)
     #right arrow/D pressed, more right
+def right():
+    player.setheading(0)
     #space pressed, shoot
 
 #if player hp hits 0
