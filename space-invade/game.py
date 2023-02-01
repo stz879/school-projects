@@ -19,7 +19,7 @@ button.shape('circle')
 button.fillcolor('red')
 button.penup()
 button.goto(150, 150)
-button.write("Click me!", align='center', font=font)
+button.write("start!", align='center', font=font)
 button.sety(150 + cursor_size + font_size)
 button.onclick(draw_onclick)
 button.showturtle()
@@ -50,13 +50,19 @@ pen.write("Score: 0  High Score: 0", align="center", font=("candara", 24, "bold"
 
 #spawn barriers
     #2 barriers, one on each side of the screen
+    
     #barriers block all bullets
     #barriers never disappear
 
 #player spawn when variable set to true
 player = turtle.Turtle()
+player.speed(0)
+player.shape("square")
+player.color("white")
+player.penup()
+player.showturtle()
 #set player hp and damage
-
+php = 
     #player starting hp = 3
     #player starting damage = 1
 
