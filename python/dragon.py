@@ -3,6 +3,8 @@ t = turtle
 s = t.Screen()
 
 #set screen size, turtle speed, background color, turtle pen/fill color, and turtle shape
+t.mode('logo')
+t.showturtle()
 s.screensize(800, 800)
 t.speed('normal')
 s.bgcolor('white')
@@ -10,8 +12,6 @@ t.pencolor("black")
 t.fillcolor("red")
 t.shape('classic')
 
-t.mode('logo')
-t.showturtle
 t.pu()
 t.setpos(200, 0)
 t.seth(270)
