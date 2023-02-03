@@ -56,6 +56,12 @@ t.seth(316)
 t.forward(57)
 t.end_fill()
 
+t.pu()
+t.seth(90)
+t.forward(10)
+
+t.pd()
+t.begin_fill()
 
 #close window if clicked
 t.exitonclick()
