@@ -10,7 +10,7 @@ for i in range(1, 101):
   if i % 5 == 0: 
     buzz = True;
   
-#look at variable(s?) and output
+#look at variables and output
   if fizz and buzz:
     print("FizzBuzz")
   elif fizz:
