@@ -1,88 +1,59 @@
-import turtle
+import pygame
 import time
 import random
 import os
-import winsound
 
-wn = turtle.Screen()
-
-#splash screen, "insert coin/press any button" prompt
-    #screen switches when button pressed
+pygame.init()
+size = width, height = 1280, 920
+screen = pygame.display.set_mode(size)
+bg = pygame.image.load("spase.gif") 
 
 def game():
-    time.sleep(random.randint(1,2))
+    while True:
+        #draw screen, music begin
+        screen.blit(bg, (0, 0))
 
-    #draw screen, music begins
-    
-    wn.title("spase ivaders !!")
-    wn.bgcolor("#db5ef7")
-    wn.bgpic("spase.gif")
+        size = width, height = 640, 480
+        screen = pygame.display.set_mode(size)
+        
 
-    wn.setup(width=1200, height=831)
-    wn.tracer(0)
-
-    pen = turtle.Turtle()
-    pen.speed(0)
-    pen.hideturtle()
-    pen.color("white")
-    pen.goto(-200, 330)
-    pen.write("Score: 0", align="center", font=("candara", 24, "bold"))
-    pen.goto(200, 330)
-    pen.write("High Score: 0", align="center", font=("candara", 24, "bold"))
-
-    #set spawn variables to true for n seconds
-
-    #spawn barriers
-        #2 barriers, one on each side of the screen
-        #barriers block all bullets
-        #barriers never disappear
-
-    #player spawn when variable set to true
-    player = turtle.Turtle()
-
-    #set player hp and damage
-    player_hp = 3
-        #player starting hp = 3
-    #player_dmg = 1
-        #player starting damage = 1
-
-    #set score to 0
-
-    #player controlfunctions
-    def shoot():
-        #function for player shooting
-        pass
-
-    def move_left():
-        #function for player moving left
-        pass
-
-    def move_right():
-        #function for player moving right
-        pass
+            #set score to 0
 
 
-    wn.listen()
-    #left arrow/A pressed, move left
-    player.onkeypress(move_left, "a")
-    player.onkeypress(move_left, "Left")
 
-    #right arrow/D pressed, move right
-    player.onkeypress(move_right, "d")
-    player.onkeypress(move_right, "Right")
 
-    #space pressed, shoot
-    player.onkeypress(shoot, "space")
+            #splash screen, "insert coin/press any button" prompt
+            #screen switches when button pressed
 
-    #if player hp hits 0
-    if player_hp == 0:
-        #show explosion
-        wn.bgpic("explosion-boom.gif")
-        #wait 1 second
-        time.sleep(1)
-        #go to game start screen
-        game()
+            #spawn barriers
+                #2 barriers, one on each side of the screen
+                #barriers block all bullets
+                #barriers never disappear
 
-game()
-wn.mainloop()
+            #player spawn
 
+            #set player hp
+                
+
+            #player control functions
+        pygame.key.set_repeat(0, 1)
+        keys = pygame.key.get_pressed()
+            #left arrow/A pressed, move left
+        if keys[pygame.K_LEFT]:
+            pass
+            #right arrow/D pressed, move right
+        if keys[pygame.K_RIGHT]:
+            pass
+            #space pressed, shoot
+
+            #if player hp hits 0
+                #show explosion
+                #wait 1 second
+                #go to game start screen
+
+run = True
+while run:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+        
