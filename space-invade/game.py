@@ -1,12 +1,10 @@
 import pygame
-
 import time
 import random
 import os
 
 pygame.init()
-size = width, height = 1280, 920
-screen = pygame.display.set_mode(size)
+screen = pygame.display.set_mode([1200, 831])
 bg = pygame.image.load("spase.gif") 
 
 
@@ -16,13 +14,8 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-    #draw screen, music begin
-    screen.blit(bg, (0, 0))
 
-    size = width, height = 640, 480
-    screen = pygame.display.set_mode(size)
         
-
             #set score to 0
 
 
@@ -66,5 +59,6 @@ while run:
                 #wait 1 second
 
                 #go to game start screen
-                
+    screen.blit(bg, (0, 0))
+    pygame.display.flip()
 
