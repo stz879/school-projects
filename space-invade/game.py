@@ -1,4 +1,5 @@
 import pygame
+
 import time
 import random
 import os
@@ -8,13 +9,18 @@ size = width, height = 1280, 920
 screen = pygame.display.set_mode(size)
 bg = pygame.image.load("spase.gif") 
 
-def game():
-    while True:
-        #draw screen, music begin
-        screen.blit(bg, (0, 0))
 
-        size = width, height = 640, 480
-        screen = pygame.display.set_mode(size)
+
+run = True
+while run:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+    #draw screen, music begin
+    screen.blit(bg, (0, 0))
+
+    size = width, height = 640, 480
+    screen = pygame.display.set_mode(size)
         
 
             #set score to 0
@@ -42,18 +48,18 @@ def game():
 
 
 
-        pygame.key.set_repeat(0, 1)
-        keys = pygame.key.get_pressed()
-            #left arrow/A pressed, move left
-        if keys[pygame.K_LEFT]:
-            pass
-            #right arrow/D pressed, move right
-        if keys[pygame.K_RIGHT]:
-            pass
-            #space pressed, shoot
-        if keys[pygame.K_SPACE]:
-            pass
-            #if player hp hits 0
+    pygame.key.set_repeat(0, 1)
+    keys = pygame.key.get_pressed()
+        #left arrow/A pressed, move left
+    if keys[pygame.K_LEFT]:
+        pass
+        #right arrow/D pressed, move right
+    if keys[pygame.K_RIGHT]:
+        pass
+        #space pressed, shoot
+    if keys[pygame.K_SPACE]:
+        pass
+        #if player hp hits 0
 
                 #show explosion
 
@@ -62,9 +68,3 @@ def game():
                 #go to game start screen
                 
 
-run = True
-while run:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
-        
