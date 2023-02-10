@@ -12,10 +12,6 @@ t.pencolor('black')
 t.fillcolor('red')
 t.shape('classic')
 
-while True:
-  #close window if clicked
-  t.exitonclick()
-
 
 #right wing
 t.pu()
@@ -179,4 +175,5 @@ t.seth(90)
 t.forward(20)
 t.end_fill()
 
-
+#close window if clicked
+t.exitonclick()
