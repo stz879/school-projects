@@ -12,9 +12,9 @@ t.pencolor('black')
 t.fillcolor('red')
 t.shape('classic')
 
-i = 1
+n = 1
 
-while i == 1:
+while n == 1:
   #right wing
   t.pu()
   t.setpos(80, 0)
@@ -177,7 +177,8 @@ while i == 1:
   t.forward(20)
   t.end_fill()
   
-  i -= 1
+  n = 0
+  break
   
 #close window if clicked
 t.exitonclick()
