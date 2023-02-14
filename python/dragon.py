@@ -177,7 +177,7 @@ while i => 1:
   t.forward(20)
   t.end_fill()
   
-  i =- 1
+  i -= 1
   
 #close window if clicked
 t.exitonclick()
