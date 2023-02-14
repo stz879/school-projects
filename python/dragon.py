@@ -14,7 +14,7 @@ t.shape('classic')
 
 i = 1
 
-while i >= 1:
+while i == 1:
   #right wing
   t.pu()
   t.setpos(80, 0)
