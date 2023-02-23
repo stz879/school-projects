@@ -3,12 +3,12 @@ import random
 def endGame():
   string_wins = str(wins)
   print("Win counter: " + string_wins)
-  print("Play again? Y/N");
-  coin = input("").upper();
+  print("Play again? Y/N")
+  coin = input("").strip().upper();
   if coin == "Y":
     game()
   else:
-    print("See you next time");
+    print("See you next time")
 
 
 def game():
@@ -53,7 +53,7 @@ wins = 0;
 
 #starting prompt
 print("Would you like to play a game? Y/N")
-confirmStart = input("").upper();
+confirmStart = input("").strip().upper();
 
 if confirmStart == "Y":
   game()
